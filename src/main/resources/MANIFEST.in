@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+recursive-include backward *
+recursive-include configs *
+recursive-include queries *
+recursive-include templates *

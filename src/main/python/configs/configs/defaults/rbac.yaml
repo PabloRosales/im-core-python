@@ -1,0 +1,9 @@
+use_rbac: True
+rbac_type: menu_rbac
+user_table: user
+roles_table: user_roles
+user_to_role_table: user_to_role
+user_id_field: user_id
+role_id_field: user_role_id
+username_field: username
+role_field: name

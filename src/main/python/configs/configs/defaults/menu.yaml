@@ -1,0 +1,13 @@
+controllers_module: administration.controllers
+root_url: /
+brand: Admin
+menu:
+    - administration
+    - core
+    - promos
+    - interreps
+    - contactosms
+    - multialertas
+    - quiniela
+    - dxc
+    - apps

@@ -1,0 +1,2 @@
+INSERT INTO channel_feed_message (channel_feed_event_id, channel_feed_id, message_source, message_ref_id, original_message, message, short_code_role, created_on, approved_on, scheduled_for)
+    VALUES (:channel_feed_event_id, :channel_feed_id, 'MANUAL', :message_ref_id, :original_message, :message, 'ALERT', NOW(), NOW(), NOW())

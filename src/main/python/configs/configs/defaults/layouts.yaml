@@ -1,0 +1,75 @@
+# For layout engine
+default:
+    master: /layouts/master
+    layout: /layouts/default
+    format: mako
+    custom-helpers: /layouts/helpers/custom
+    login-template: /layouts/site/login
+template_config:
+    strict_undefined: False
+scripts:
+    jQuery:
+        path: /js/jquery-1.7.2.min.js
+        pos: 0
+        autoload: 1
+    jQueryUi:
+        path: /js/jquery-ui-1.8.22.custom.min.js
+        pos: 0
+        autoload: 0
+    date:
+        path: /js/date.js
+        pos: 0
+        autoload: 0
+    anytime:
+        path: /js/anytime.js
+        pos: 0
+        autoload: 0
+    bootstrap:
+        path: /js/bootstrap-2.1.1.js
+        pos: 0
+        autoload: 1
+    crossfilter:
+        path: /js/crossfilter.min.js
+        pos: 0
+        autoload: 0
+    crud:
+        path: /js/crud.js
+        pos: 0
+        autoload: 0
+    crudDates:
+        path: /js/crud-dates.js
+        pos: 0
+        autoload: 0
+    url:
+        path: /js/url.js
+        pos: 0
+        autoload: 0
+    jQuery.cookies:
+        path: /js/jquery.cookies.2.2.0.min.js
+        pos: 0
+        autoload: 0
+styles:
+    style-bootstrap-responsive-css:
+        path: /css/bootstrap-responsive-2.1.1.min.css
+        autoload: 0
+    style-bootstrap-css:
+        path: /css/bootstrap-2.1.1.min.css
+        autoload: 1
+    style-bootwstrap-addon-css:
+        path: /css/rickshaw.min.css
+        autoload: 0
+    style-jquery-ui-css:
+        path: /css/jquery-ui/jquery-ui-1.8.22.custom.css
+        autoload: 0
+    anytime-css:
+        path: /css/anytime.css
+        autoload: 0
+    d3-css:
+        path: /css/d3.css
+        autoload: 0
+    crud-css:
+        path: /css/crud.css
+        autoload: 0
+    application-css:
+        path: /static/css/application.css
+        autoload: 0

@@ -1,0 +1,115 @@
+order: [home, -Configuración, country, carrier, short_code_group, short_code, -Paquetes, package_type, package, -, -Cuentas, accounts, -, -Monitores, global_monitor, global_monitor_to_account, -, -Reportes, reports_accounts]
+title: ContactoSMS
+controller: contactosms.home.home
+home:
+    title: Dashboard
+    controller: contactosms.home.home
+country:
+    order: [list, add]
+    title: Paises
+    help: Paises configurados
+    list:
+        title: Lista
+        controller: contactosms.country.list
+    add:
+        title: Agregar
+        controller: contactosms.country.add
+carrier:
+    order: [list, add]
+    title: Operadoras
+    help: Operadoras configuradas
+    list:
+        title: Lista
+        controller: contactosms.carrier.list
+    add:
+        title: Agregar
+        controller: contactosms.carrier.add
+short_code_group:
+    order: [list, add]
+    title: Grupo de marcaciones
+    help: Grupo de marcaciones configurados
+    list:
+        title: Lista
+        controller: contactosms.short_code_group.list
+    add:
+        title: Agregar
+        controller: contactosms.short_code_group.add
+short_code:
+    order: [list, add]
+    title: Marcaciones
+    help: Marcaciones configuradas
+    list:
+        title: Lista
+        controller: contactosms.short_code.list
+    add:
+        title: Agregar
+        controller: contactosms.short_code.add
+package:
+    order: [list, add]
+    title: Paquetes
+    list:
+        title: Lista
+        controller: contactosms.package.list
+    add:
+        title: Agregar
+        controller: contactosms.package.add
+package_type:
+    order: [list, add]
+    title: Tipos de paquete
+    list:
+        title: Lista
+        controller: contactosms.package_type.list
+    add:
+        title: Agregar
+        controller: contactosms.package_type.add
+accounts:
+    order: [list, add]
+    title: Cuentas
+    help: Cuentas
+    list:
+        title: Lista
+        controller: contactosms.account.list
+    add:
+        title: Agregar
+        controller: contactosms.account.add
+account_sms_subscription_type:
+    order: [list, add]
+    title: Tipo de suscripción
+    help: Tipos de suscripcion
+    list:
+        title: Lista
+        controller: contactosms.account_sms_subscription_type.list
+    add:
+        title: Agregar
+        controller: contactosms.account_sms_subscription_type.add
+global_monitor:
+    order: [list, add]
+    title: Monitores Globales
+    list:
+        title: Lista
+        controller: contactosms.global_monitor.list
+    add:
+        title: Agregar
+        controller: contactosms.global_monitor.add
+global_monitor_to_account:
+    order: [list, add]
+    title: Monitores Globales a cuentas
+    list:
+        title: Lista
+        controller: contactosms.global_monitor_to_account.list
+    add:
+        title: Agregar
+        controller: contactosms.global_monitor_to_account.add
+reports_accounts:
+    order: [cycles, monthly, log]
+    title: Cuentas
+    cycles:
+        title: Mensajes por ciclos
+        controller: contactosms.reports.messages_cycles
+    monthly:
+        title: Mensajes por mes
+        controller: contactosms.reports.messages_monthly
+    log:
+        title: Log de mensajes
+        controller: contactosms.reports.messages_log
+

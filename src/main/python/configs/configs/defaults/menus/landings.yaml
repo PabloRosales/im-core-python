@@ -1,0 +1,37 @@
+order: [home, catalogs, landings, partners]
+title: Landings
+home:
+    title: Dashboard
+    controller: landings.home.home
+catalogs:
+    title: Catálogos
+    controller: landings.catalogs.home
+    order: [list, add]
+    icon: icon-th-large
+    list:
+        title: Lista
+        controller: landings.catalogs.list
+    add:
+        title: Agregar
+        controller: landings.catalogs.add
+landings:
+    title: Landings
+    controller: landings.landings.home
+    order: [list, add]
+    icon: icon-stop
+    list:
+        title: Lista
+        controller: landings.landings.list
+    add:
+        title: Agregar
+        controller: landings.landings.add
+partners:
+    title: Partners
+    controller: landings.partners.home
+    order: [list, add]
+    list:
+        title: Lista
+        controller: landings.partners.list
+    add:
+        title: Agregar
+        controller: landings.landings.add

@@ -1,0 +1,149 @@
+order: [home, -Configuración, country, telco, texts, -, -Partidos, tournament, group, team, stage, match, -, -Usuarios, user, -, -Trivias, quiz, questions, -, -Estadisticas y Logs, log, stats]
+title: Quiniela
+home:
+    title: Dashboard
+    controller: quiniela.home.home
+team:
+    order: [list, add]
+    title: Equipos
+    help: Administración de equipos.
+    list:
+        title: Lista
+        controller: quiniela.team.list
+    add:
+        title: Agregar
+        controller: quiniela.team.add
+tournament:
+    order: [list, add]
+    title: Torneos
+    help: Administración de torneos.
+    list:
+        title: Lista
+        controller: quiniela.tournament.list
+    add:
+        title: Agregar
+        controller: quiniela.tournament.add
+stage:
+    order: [list, add]
+    title: Etapas
+    help: Administración de etapas.
+    list:
+        title: Lista
+        controller: quiniela.stage.list
+    add:
+        title: Agregar
+        controller: quiniela.stage.add
+match:
+    order: [list, add]
+    title: Partidos
+    help: Administración de partidos.
+    list:
+        title: Lista
+        controller: quiniela.match.list
+    add:
+        title: Agregar
+        controller: quiniela.match.add
+quiz:
+    order: [list, add]
+    title: Trivias
+    help: Administración de trivias.
+    icon: icon-question-sign
+    list:
+        title: Lista
+        controller: quiniela.quiz.list
+    add:
+        title: Agregar
+        controller: quiniela.quiz.add
+questions:
+    order: [list, add]
+    title: Preguntas
+    help: Administración de preguntas.
+    icon: icon-question-sign
+    list:
+        title: Lista
+        controller: quiniela.question.list
+    add:
+        title: Agregar
+        controller: quiniela.question.add
+user:
+    order: [list]
+    title: Usuarios
+    help: Vista de perfil y estadísticas de usuarios.
+    icon: icon-user
+    list:
+        title: Listado
+        controller: quiniela.user.list
+log:
+    order: [statistical, statistical_summary]
+    title: Logs
+    help: Logs de mensajes de toda la base y por usuario.
+    icon: icon-comment
+    statistical:
+        title: Mensajes
+        controller: quiniela.log.statistical
+        icon: icon-eye-open
+        icon: icon-comment
+    statistical_summary:
+        title: Resumen
+        controller: quiniela.log.statistical_summary
+        icon: icon-eye-open
+        icon: icon-comment
+stats:
+    order: [short_number, type, users]
+    title: Estadísticas
+    help: Estadísticas
+    icon: icon-signal
+    users:
+        title: Usuarios
+        controller: quiniela.stats.users
+        icon: icon-eye-open
+        icon: icon-comment
+    type:
+        title: Mensajes por tipo
+        controller: quiniela.stats.type
+        icon: icon-eye-open
+        icon: icon-comment
+    short_number:
+        title: Mensajes por marcación
+        controller: quiniela.stats.short_number
+        icon: icon-eye-open
+        icon: icon-comment
+group:
+    order: [list, add]
+    title: Grupos
+    help: Administración de grupos.
+    list:
+        title: Lista
+        controller: quiniela.group.list
+    add:
+        title: Agregar
+        controller: quiniela.group.add
+telco:
+    order: [list, add]
+    title: Operadores
+    help: Administración de operadores.
+    list:
+        title: Lista
+        controller: quiniela.telco.list
+    add:
+        title: Agregar
+        controller: quiniela.telco.add
+country:
+    order: [list, add]
+    title: Paises
+    help: Administración de paises.
+    list:
+        title: Lista
+        controller: quiniela.country.list
+    add:
+        title: Agregar
+        controller: quiniela.country.add
+texts:
+    order: [texts]
+    title: Textos
+    help: Textos de quiniela
+    icon: icon-comment
+    texts:
+        title: SMS
+        controller: quiniela.texts.list
+

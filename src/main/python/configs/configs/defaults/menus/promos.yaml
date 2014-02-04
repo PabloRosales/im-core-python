@@ -1,0 +1,105 @@
+order: [home, -Configuración, country, carrier, short_code_group, short_code, promos, prize, -, -Configuración específica, multichat_configs, quiniela_quiz_configs, quiniela_prediction_configs, -, -Ganadores, winners]
+title: Promos
+home:
+    title: Dashboard
+    controller: promos.home.home
+country:
+    order: [list, add]
+    title: Paises
+    help: Paises configurados
+    list:
+        title: Lista
+        controller: promos.country.list
+    add:
+        title: Agregar
+        controller: promos.country.add
+carrier:
+    order: [list, add]
+    title: Operadoras
+    help: Operadoras configuradas
+    list:
+        title: Lista
+        controller: promos.carrier.list
+    add:
+        title: Agregar
+        controller: promos.carrier.add
+short_code_group:
+    order: [list, add]
+    title: Grupo de marcaciones
+    help: Grupo de marcaciones configurados
+    list:
+        title: Lista
+        controller: promos.short_code_group.list
+    add:
+        title: Agregar
+        controller: promos.short_code_group.add
+short_code:
+    order: [list, add]
+    title: Marcaciones
+    help: Marcaciones configuradas
+    list:
+        title: Lista
+        controller: promos.short_code.list
+    add:
+        title: Agregar
+        controller: promos.short_code.add
+promos:
+    order: [list, add]
+    title: Promos
+    help: Promociones
+    list:
+        title: Lista
+        controller: promos.promo.list
+    add:
+        title: Agregar
+        controller: promos.promo.add
+prize:
+    order: [list, add]
+    title: Premios
+    help: Premios
+    list:
+        title: Lista
+        controller: promos.prize.list
+    add:
+        title: Agregar
+        controller: promos.prize.add
+winners:
+    order: [add, check]
+    title: Ganadores
+    add:
+        title: Agregar
+        controller: promos.winners.add
+    check:
+        title: Revisar
+        controller: promos.winners.check
+multichat_configs:
+    order: [list, add]
+    title: MultiChat Promos
+    help: Configuraciones de promos para MultiChat
+    list:
+        title: Lista
+        controller: promos.multichat_promo_config.list
+    add:
+        title: Agregar
+        controller: promos.multichat_promo_config.add
+quiniela_quiz_configs:
+    order: [list, add]
+    title: Quiniela Promos (Trivias)
+    help: Configuraciones de promos para trivias de Quiniela
+    list:
+        title: Lista
+        controller: promos.quiniela_quiz_promo_config.list
+    add:
+        title: Agregar
+        controller: promos.quiniela_quiz_promo_config.add
+quiniela_prediction_configs:
+    order: [list, add]
+    title: Quiniela Promos (Predicciones)
+    help: Configuraciones de promos para predicciones de Quiniela
+    list:
+        title: Lista
+        controller: promos.quiniela_prediction_promo_config.list
+    add:
+        title: Agregar
+        controller: promos.quiniela_prediction_promo_config.add
+

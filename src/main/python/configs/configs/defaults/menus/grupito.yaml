@@ -1,0 +1,10 @@
+title: Grupito
+controller: grupito.home.home
+users:
+    title: Usuarios
+    controller: grupito.users.home
+    disabled: True
+    list:
+        title: Perfiles
+        controller: grupito.users.list
+        disabled: True

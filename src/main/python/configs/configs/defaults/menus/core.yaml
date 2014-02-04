@@ -1,0 +1,98 @@
+order: [home, -Configuración, route, -, -Herramientas, console_sms, bulk_actions, subscription, -, -Servidor, process, -, -Reportes, reports_esme, -, development]
+title: Plataforma
+controller: core.home.home
+home:
+    title: Dashboard
+    controller: core.home.home
+console_sms:
+    order: [send, check]
+    title: Console SMS
+    help: Envío de MO y MT
+    send:
+        title: Enviar SMS
+        controller: core.console.send
+    check:
+        title: Revisar SMS
+        controller: core.console.check
+route:
+    order: [list, add]
+    title: Esme
+    help: Routes de marcaciones en los ESME.
+    list:
+        title: Lista de rutas
+        controller: core.route.list
+    add:
+        title: Agregar ruta
+        controller: core.route.add
+reports_esme:
+    order: [status]
+    title: ESMEs
+    help: Reportes de ESMEs
+    status:
+        title: Status
+        controller: core.reports.status
+reports_bulks:
+    order: [hours, phones]
+    title: Bulks
+    hours:
+        title: Hora de envíos
+        controller: core.bulks.hours
+        disabled: True
+    phones:
+        title: Teléfonos
+        controller: core.bulks.phones
+        disabled: True
+console_billing:
+    order: [check]
+    title: Billing
+    check:
+        title: Revisión
+        controller: core.console_billing.check
+        disabled: True
+process:
+    order: [status]
+    title: Procesos
+    status:
+        title: Status
+        controller: core.process.status
+reports_process:
+    order: [performance]
+    title: Procesos
+    performance:
+        title: Performance
+        controller: core.process.performance
+        disabled: True
+bulk_messages:
+    order: [list, add]
+    title: Mensajes
+    list:
+        title: Lista
+        controller: core.bulks.list
+    add:
+        title: Agregar
+        controller: core.bulks.add
+bulk_actions:
+    order: [messages]
+    title: Bulks
+    messages:
+        title: Envíos
+        controller: core.bulks.messages
+    add:
+        title: Generar BC
+        controller: core.bulks.broadcast
+        disabled: True
+subscription:
+    order: [subscribe]
+    title: Suscripción
+    subscribe:
+        title: Por log MO
+        controller: core.subscribe.subscribe
+development:
+    order: [svn_changelogs, changelogs]
+    title: Desarrollo
+    svn_changelogs:
+        title: SVN Changelogs
+        controller: core.changelogs.svn_change_logs
+    changelogs:
+        title: Changelogs
+        controller: core.changelogs.change_logs

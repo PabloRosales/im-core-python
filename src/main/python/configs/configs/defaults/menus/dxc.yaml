@@ -1,0 +1,252 @@
+title: DxC
+controller: dxc.home.home
+order: [home, reportes, tools, translations, templates, spocosy]
+home:
+    title: Dashboard
+    controller: dxc.home.home
+reportes:
+    title: Reportes
+    order: [categories, games, messages, subscriptions]
+    categories:
+        title: Categorias
+        controller: dxc.categories
+        order: [list]
+        help: Categorias a las que pueden suscribirse los usuarios
+        list:
+            title: Categorias
+            controller: dxc.categories.list
+        messages:
+            title: Mensajes por categoria
+            controller: dxc.categories.messages
+    games:
+        title: Partidos
+        controller: dxc.games
+        order: [calendar, list]
+        help: Listado de partidos en el sistema
+        calendar:
+            title: Partidos actuales
+            controller: dxc.games.calendar
+        list:
+            title: Lista de partidos
+            controller: dxc.games.list
+    messages:
+        title: MO/MT
+        controller: dxc.message_log
+        order: [mo_mt, mo, mt]
+        help: Mensajes enviados y recibidos por el sistema
+        mo_mt:
+            title: MO/MT
+            controller: dxc.message_log.list 
+        mo:
+            title: MO
+            controller: dxc.message_log.list_mo
+        mt:
+            title: MT
+            controller: dxc.message_log.list_mt
+    subscriptions:
+        title: Suscripciones
+        controller: dxc.reports.subscriptions 
+        help: Usuarios suscritos
+
+spocosy:
+    title: Spocosy
+    order: [event, default, incident_type]
+    incident_type:
+        title: Tipos de Incidente
+        controller: dxc.incident_type.list
+        order: [list]
+        help: Tipos de Incidente.
+        list:
+            title: Lista
+            controller: dxc.incident_type.list
+    event:
+        title: Eventos
+        controller: dxc.event.list
+        order: [list]
+        help: Administración de eventos.
+        list:
+            title: Lista
+            controller: dxc.event.list
+    tournament:
+        title: Torneos
+        controller: dxc.tournament.list
+        order: [list]
+        help: Administración de torneos.
+        list:
+            title: Lista
+            controller: dxc.tournament.list
+    default:
+        title: Valores iniciales
+        controller: dxc.default.configure
+        order: [configure]
+        help: Valores iniciales.
+        configure:
+            title: Configurar
+            controller: dxc.default.configure
+translations:
+    title: Traducciones
+    order: [alias_tournaments, alias_stages, alias_teams]
+    alias_tournaments:
+        title: Torneos (es)
+        controller: dxc.alias_tournament.list
+        help: Administrar aliases en espa&ntilde;ol para la lista de torneos
+        order: [list, add]
+        add:
+            title: Agregar
+            controller: dxc.alias_tournament.add
+        list:
+            title: Lista
+            controller: dxc.alias_tournament.list
+    alias_stages:
+        title: Etapas (es)
+        controller: dxc.alias_stage.list
+        help: Administrar aliases en espa&ntilde;ol para la lista de etapas
+        order: [list, add]
+        add:
+            title: Agregar
+            controller: dxc.alias_stage.add
+        list:
+            title: Lista
+            controller: dxc.alias_stage.list
+    alias_teams:
+        title: Equipos (es)
+        controller: dxc.alias_team.list
+        help: Administrar aliases en espa&ntilde;ol para los equipos
+        order: [list, add]
+        add:
+            title: Agregar
+            controller: dxc.alias_team.add
+        list:
+            title: Lista
+            controller: dxc.alias_team.list
+tools:
+    title: Herramientas
+    order: [announcements]
+    manual_message:
+        title: Mensajes manuales
+        controller: dxc.manual_message.list
+        order: [send]
+        help: Administraci&oacute;n de mensajes manuales.
+        send:
+            title: Enviar
+            controller: dxc.manual_message.send
+    announcements:
+        title: Mensajes manuales
+        controller: dxc.announcement.list
+        order: [send, config]
+        help: Administraci&oacute;n de mensajes manuales.
+        send:
+            title: Enviar
+            controller: dxc.announcement.add
+        config:
+            title: Configurar
+            controller: dxc.announcement_carrier.list
+message_generation:
+    title: Generación de mensajes
+    order: [configuration, reminder, reminder_assignment, language, platform]
+    reminder_assignment:
+        title: Asignación de Recordatorios
+        controller: dxc.reminder_assignment.list
+        order: [list, add]
+        help: Asignación de alertas.
+        list:
+            title: Lista
+            controller: dxc.reminder_assignment.list
+        add:
+            title: Agregar
+            controller: dxc.reminder_assignment.add
+    language:
+        title: Lenguages
+        controller: dxc.language.list
+        order: [list, add]
+        help: Administración de lenguajes.
+        list:
+            title: Lista
+            controller: dxc.language.list
+        add:
+            title: Agregar
+            controller: dxc.language.add
+    configuration:
+        title: Configuraciones
+        controller: dxc.configuration.list
+        order: [list, add]
+        help: Administración de Configuraciones.
+        list:
+            title: Lista
+            controller: dxc.configuration.list
+        add:
+            title: Agregar
+            controller: dxc.configuration.add
+    reminder:
+        title: Recordatorios
+        controller: dxc.reminder.list
+        order: [list, add]
+        help: Administración de alertas.
+        list:
+            title: Lista
+            controller: dxc.reminder.list
+        add:
+            title: Agregar
+            controller: dxc.reminder.add
+    platform:
+        title: Plataformas
+        controller: dxc.platform.list
+        order: [list, add]
+        help: Administración de plataformas.
+        list:
+            title: Lista
+            controller: dxc.platform.list
+        add:
+            title: Agregar
+            controller: dxc.platform.add
+templates:
+    title: Plantillas
+    order: [template, template_token, template_group, template_group_assignment]
+    template_token:
+        title: Tokens
+        controller: dxc.template_token.list
+        order: [list]
+        help: Tokens
+        list:
+            title: Lista
+            controller: dxc.template_token.list
+    template_group_assignment:
+        title: Asignación de grupo de plantillas
+        controller: dxc.message_template_group_assignment.list
+        order: [list, add]
+        help: Asignación de grupos de plantillas.
+        list:
+            title: Lista
+            controller: dxc.message_template_group_assignment.list
+        add:
+            title: Agregar
+            controller: dxc.message_template_group_assignment.add
+    template_group:
+        title: Grupo de plantillas
+        controller: dxc.message_template_group.list
+        order: [list, add]
+        help: Administración de grupos de plantillas.
+        list:
+            title: Lista
+            controller: dxc.message_template_group.list
+        add:
+            title: Agregar
+            controller: dxc.message_template_group.add
+    template:
+        title: Plantillas
+        controller: dxc.template.list
+        order: [list, add]
+        help: Administración de plantillas.
+        list:
+            title: Lista
+            controller: dxc.template.list
+        add:
+            title: Agregar
+            controller: dxc.template.add
+reports:
+    title: Reportes
+    order: [subscriptions]
+    subscriptions:
+        title: Suscripciones
+        controller: dxc.reports.subscriptions
+

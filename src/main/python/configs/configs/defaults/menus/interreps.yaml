@@ -1,0 +1,67 @@
+subscriptions_mt:
+    title: Suscripciones MT
+    controller: interreps.subscriptions.mt
+order: [home, -Movimiento, traffic, -, -Financieros, revenue, -, -Suscripciones, subscriptions_recurrent, subscriptions_mt, -, -Usuarios, users]
+title: 'InterReps'
+controller: interreps.dashboard.show
+home:
+    title: Dashboard
+    controller: interreps.dashboard.show
+movement:
+    order: [movement_details, movement_resume]
+    title: Movimiento
+    movement_details:
+        title: Detalle
+        controller: interreps.movement.details
+    movement_resume:
+        title: Resumen
+        controller: interreps.movement.resume
+traffic:
+    order: [traffic_daily, traffic_weekly]
+    title: Tráfico
+    traffic_daily:
+        title: Diario
+        controller: interreps.traffic.daily
+    traffic_weekly:
+        title: Semanal
+        controller: interreps.traffic.weekly
+
+settlements:
+    order: [settlements]
+    title: Liquidaciones
+    settlements:
+        title: Liquidaciones
+        controller: interreps.settlements.settlements
+revenue:
+    order: [revenue_daily, revenue_daily_detailed]
+    title: Revenue
+    revenue_daily:
+        title: Total Diario
+        controller: interreps.revenue.daily
+    revenue_daily_detailed:
+        title: Detallado Diario
+        controller: interreps.revenue.detailed
+subscriptions_recurrent:
+    order: [subscriptions_recurrent, subscriptions_recurrent_churn]
+    title: Recurrentes
+    subscriptions_recurrent:
+        title: Suscripciones
+        controller: interreps.subscriptions.recurrent
+    subscriptions_recurrent_churn:
+        title: CHURN
+        controller: interreps.subscriptions.recurrent_churn
+subscriptions_mt:
+    order: [subscriptions_mt, subscriptions_mt_churn]
+    title: MT
+    subscriptions_mt:
+        title: Suscripciones
+        controller: interreps.subscriptions.mt
+    subscriptions_mt_churn:
+        title: CHURN
+        controller: interreps.subscriptions.mt_churn
+users:
+    order: [users_active_daily]
+    title: Usuarios
+    users_active_daily:
+        title: Activos Diarios
+        controller: interreps.users.daily_active

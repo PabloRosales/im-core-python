@@ -1,0 +1,34 @@
+default_level: debug
+console_level: debug
+file_path: /var/log/apps/im.log
+file_level: debug
+loggers:
+    # third party
+    sqlalchemy.engine: 
+        level: debug
+    sqlalchemy.pool:
+        level: debug
+    sqlalchemy.dialects: 
+        level: debug
+    sqlalchemy.orm: 
+        level: debug
+    werkzeug:
+        level: debug
+    stomp.py:
+        level: debug
+    # core
+    im.core: 
+        level: debug
+    im.core.web.werkzeug:
+        level: debug
+    im.core.database.mongo:
+        level: debug
+    im.core.database.mysql:
+        level: debug
+    im.core.templates.mako:
+        level: debug
+    # apps
+    im.landings:
+        level: debug
+    im.reports:
+        level: debug

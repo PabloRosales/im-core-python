@@ -1,0 +1,15 @@
+allow_automatic_routing: False
+url_scheme: http
+port: 80
+debug: False
+sessions: True
+allow_automatic_routing: True
+auth_cookie_name: generic_auth_cookie
+cookie_name: generic_cookie
+login_url: /auth/login/
+debug: True
+use_auth: False
+auth_salt: p3pp3R
+cdn_url: http://static.interactuamovil.com
+static_url: /static
+host: localhost

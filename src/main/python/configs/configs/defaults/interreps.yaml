@@ -1,0 +1,6 @@
+applications:
+    '7': ContactoSMS
+    '3': MultiChat
+    '4': Quiniela
+    '5': DxC
+    '9': MultiAlertas

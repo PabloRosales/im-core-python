@@ -1,0 +1,212 @@
+title: MultiAlertas
+order: [home, configuration, ads, content, reports]
+home:
+    title: Dashboard
+    controller: multialertas.home.home
+configuration:
+    order: [country, carrier, carrier_configuration, short_code_group, short_code, channel_category, channel_feed, channel_feed_twitter, channel_feed_multimedia, channel_category_conf]
+    title: Configuración
+    country:
+        order: [list, add]
+        title: Paises
+        list:
+            title: Lista
+            controller: multialertas.country.list
+        add:
+            title: Agregar
+            controller: multialertas.country.add
+    carrier:
+        order: [list, add]
+        title: Operadoras
+        list:
+            title: Lista
+            controller: multialertas.carrier.list
+        add:
+            title: Agregar
+            controller: multialertas.carrier.add
+    carrier_configuration:
+        order: [list, add]
+        title: Configuración de operadoras
+        list:
+            title: Lista
+            controller: multialertas.carrier_configuration.list
+        add:
+            title: Agregar
+            controller: multialertas.carrier_configuration.add
+    short_code_group:
+        order: [list, add]
+        title: Grupo de marcaciones
+        help: Grupo de marcaciones configurados
+        list:
+            title: Lista
+            controller: multialertas.short_code_group.list
+        add:
+            title: Agregar
+            controller: multialertas.short_code_group.add
+    short_code:
+        order: [list, add]
+        title: Marcaciones
+        help: Marcaciones configuradas
+        list:
+            title: Lista
+            controller: multialertas.short_code.list
+        add:
+            title: Agregar
+            controller: multialertas.short_code.add
+    channel_category:
+        order: [list, add]
+        title: Categorías
+        list:
+            title: Lista
+            controller: multialertas.channel_category.list
+        add:
+            title: Agregar
+            controller: multialertas.channel_category.add
+    channel_feed:
+        order: [list, add]
+        title: Temas
+        list:
+            title: Lista
+            controller: multialertas.channel_feed.list
+        add:
+            title: Agregar
+            controller: multialertas.channel_feed.add
+    channel_feed_twitter:
+        order: [list, add]
+        title: Cuentas Twitter
+        list:
+            title: Lista
+            controller: multialertas.channel_feed_twitter.list
+        add:
+            title: Agregar
+            controller: multialertas.channel_feed_twitter.add
+    channel_feed_multimedia:
+        order: [list, add]
+        title: Canal MultiMedia
+        list:
+            title: Lista
+            controller: multialertas.channel_feed_multimedia.list
+        add:
+            title: Agregar
+            controller: multialertas.channel_feed_multimedia.add
+    channel_category_conf:
+        order: [list, add]
+        title: Configuracion de Categorias
+        list:
+            title: Lista
+            controller: multialertas.channel_category_conf.list
+        add:
+            title: Agregar
+            controller: multialertas.channel_category_conf.add
+
+reports:
+    order: [ads_reports, messages_sent, carrier_chooser]
+    title: Reportes
+    ads_reports:
+        order: [keywords]
+        title: Publicidad
+        keywords:
+            title: Keywords
+            controller: multialertas.reports.keywords
+    messages_sent:
+        title: Mensajes enviados
+        controller: multialertas.reports.messages_sent
+    carrier_chooser:
+        title: Reportes por Carrier
+        controller: multialertas.reports.carrier_chooser
+ads:
+    order: [ad_message, segmentation,promos]
+    title: Publicidad
+    ad_message:
+        order: [list, add]
+        title: Anuncios
+        icon: icon-globe
+        list:
+            title: Lista
+            controller: multialertas.ad_message.list
+        add:
+            title: Agregar
+            controller: multialertas.ad_message.add
+    segmentation:
+        order: [ad_group, ad_group_channel_category]
+        title: Segmentación
+        ad_group:
+            order: [list, add]
+            title: Grupos de categorias
+            list:
+                title: Lista
+                controller: multialertas.ad_group.list
+            add:
+                title: Agregar
+                controller: multialertas.ad_group.add
+        ad_group_channel_category:
+            order: [list, add]
+            title: Categorías en grupos
+            list:
+                title: Lista
+                controller: multialertas.ad_group_channel_category.list
+            add:
+                title: Agregar
+                controller: multialertas.ad_group_channel_category.add
+    promos:
+        order: [list, add]
+        title: Administracion de Promos
+        list:
+            title: Lista
+            controller: multialertas.subscription_promo.list
+        add:
+            title: Agregar
+            controller: multialertas.subscription_promo.add
+
+
+content:
+    order: [multimedia_content, load]
+    title: Contenido
+    messages:
+        order: [add]
+        title: Mensajes
+        add:
+            title: Agregar
+            controller: multialertas.messages.add
+    multimedia_content:
+        order: [list, add]
+        title: Contenido Multimedia
+        list:
+            title: Lista
+            controller: multialertas.multimedia_content.list
+        add:
+            title: Agregar
+            controller: multialertas.multimedia_content.add
+    load:
+        order: [multimedia]
+        title: Carga
+        messages:
+            title: Mensajes (SMS)
+            controller: multialertas.load.messages
+        multimedia:
+            title: Multimedia (MMS)
+            controller: multialertas.load.multimedia
+subscriptions_reports:
+    order: [hours, user_subscriptions, category_subscriptions]
+    title: Suscripciones
+    hours:
+        title: Horas de cancelaciones
+        controller: multialertas.reports.hours
+    user_subscriptions:
+        title: Suscritos
+        controller: multialertas.reports.user_subscriptions
+    category_subscriptions:
+        title: Por categoría
+        controller: multialertas.suscriptions.per_category
+        icon: icon-signal
+actions:
+    order: [stop, pending]
+    title: Acciones
+    stop:
+        title: Detener envío
+        controller: multialertas.messages.stop
+        icon: icon-remove
+    pending:
+        title: Revisión de encolados
+        controller: multialertas.messages.pending
+

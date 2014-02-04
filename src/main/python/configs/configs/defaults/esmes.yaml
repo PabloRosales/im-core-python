@@ -1,0 +1,58 @@
+host: 192.168.100.4
+port: 61613
+# use host and port configuration to override defaults
+einteractua1:
+    database: esme_einteractua1
+    tx: esme.einteractua1.tx
+    channel_key: sms-einteractua1
+einteractua2:
+    port: 61623
+    database: esme_einteractua2
+    tx: esme.einteractua2.tx
+    channel_key: sms-einteractua2
+einteractua3:
+    database: esme_einteractua3
+    tx: esme.einteractua3.tx
+    channel_key: sms-einteractua3
+eactuacorp1:
+    database: esme_eactuacorp1
+    tx: esme.eactuacorp1.tx
+    channel_key: sms-esme_eactuacorp1
+grupito:
+    database: esme_grupito
+    tx: esme.grupito.tx
+    channel_key: sms-wau-smpp
+interven:
+    database: esme_interven
+    tx: esme.interven.tx
+    channel_key: sms-wau-smpp2
+interven60:
+    database: esme_interven60
+    tx: esme.interven60.tx
+    channel_key: sms-wau-interven60
+intermov:
+    database: esme_intermov
+    tx: esme.intermov.tx
+    channel_key: sms-wau-smpp-mov
+dxc:
+    port: 61623
+    database: esme_dxc
+    tx: esme.interdxc.tx
+    channel_key: sms-dxc
+dxc_sv:
+    port: 61623
+    database: esme_dxc_sv
+    tx: esme.dxc.sv.tx
+    channel_key: sms-dxc-sv
+wau_smsc:
+    database: esme_wau_smsc
+    tx: esme.wau-smsc.tx
+    channel_key: sms-wau
+sv_tigo:
+    database: esme_sv_tigo
+    tx: esme.sv-tigo.tx
+    channel_key: sms-sv-tigo
+clarogt:
+    database: esme_clarogt
+    tx: esme.clarogt.tx
+    channel_key: sms-gt-claro

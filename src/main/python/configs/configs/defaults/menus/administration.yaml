@@ -1,0 +1,33 @@
+order: [home, -Autenticación, user, -Configuración, test_phones]
+title: Admin
+controller: administration.home.home
+acl: administration
+roles: [admin]
+home:
+    roles: [admin]
+    title: Dashboard
+    controller: administration.home.home
+test_phones:
+    roles: [admin]
+    order: [list, add]
+    title: Teléfonos de prueba
+    list:
+        roles: [admin]
+        title: Lista
+        controller: administration.test_phone.list
+    add:
+        roles: [admin]
+        title: Agregar
+        controller: administration.test_phone.add
+user:
+    roles: [admin]
+    order: [list, add]
+    title: Usuarios
+    list:
+        roles: [admin]
+        title: Lista
+        controller: administration.user.list
+    add:
+        roles: [admin]
+        title: Agregar
+        controller: administration.user.add

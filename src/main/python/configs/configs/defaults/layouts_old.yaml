@@ -1,0 +1,143 @@
+layouts:
+    crud_simple:
+        inherit: /core/crud/%(format)s/base
+    crud_dashboard:
+        inherit: /core/crud/%(format)s/base
+        sections:
+            -
+                template: /core/crud/%(format)s/dashboard
+    crud_instance_selection:
+        inherit: /core/crud/%(format)s/base
+        sections:
+            -
+                template: /core/crud/%(format)s/instance_selection
+    crud_report_list:
+        inherit: /core/crud/%(format)s/base
+        sections:
+            -
+                template: /core/crud/%(format)s/report_list
+    crud_list:
+        inherit: /core/crud/%(format)s/base
+        sections:
+            -
+                template: /core/crud/%(format)s/list
+    crud_add:
+        inherit: /core/crud/%(format)s/base
+        sections:
+            -
+                template: /core/crud/%(format)s/add
+    crud_delete:
+        inherit: /core/crud/%(format)s/base
+        sections:
+            -
+                template: /core/crud/%(format)s/delete
+    crud_show:
+        inherit: /core/crud/%(format)s/base
+        sections:
+            -
+                template: /core/crud/%(format)s/show
+    crud_update:
+        inherit: /core/crud/%(format)s/base
+        sections:
+            -
+                template: /core/crud/%(format)s/update
+    login:
+        inherit: /core/crud/%(format)s/base
+        sections:
+            -
+                type: form
+                class: form-horizontal
+                sections:
+                    -
+                        type: row
+                        sections:
+                            -
+                                type: span
+                                size: 12
+                                sections:
+                                    -
+                                        type: form-input
+                                        label: Usuario
+                                        placeholder: 'Nombre de usuario'
+                                        name: username
+                                    -
+                                        type: form-input
+                                        label: Clave
+                                        input-type: password
+                                        name: password
+                                    -
+                                        type: form-actions
+                                        sections:
+                                            -
+                                                type: form-submit
+                                                text: Entrar
+                                                id: submit
+    # testing
+    _crud_list:
+        inherit: /core/crud/%(format)s/base
+        sections:
+            -
+                -
+                    id: toolbar
+                    type: toolbar
+                    sections:
+                        -
+                            id: new
+                            type: button-group
+                            sections:
+                                -
+                                    type: button
+                                    label: Nuevo
+                                    url: ../add
+                                    icon: icon-plus
+                        -
+                            id: filters
+                            type: button-group
+                            sections:
+                                -
+                                    type: button
+                                    label: Refrescar
+                                    url: current+
+                                    icon: icon-refresh
+                                -
+                                    type: button
+                                    label: 10
+                                    url: current+per_page=10
+                                    icon: icon-list
+                                    inverse: per_page==10
+                                -
+                                    type: button
+                                    label: 30
+                                    url: current+per_page=30
+                                    icon: icon-list
+                                    inverse: per_page==30
+                                -
+                                    type: button
+                                    label: 60
+                                    url: current+per_page=60
+                                    icon: icon-list
+                                    inverse: per_page==60
+                                -
+                                    type: button
+                                    label: Todos
+                                    url: current+per_page=all
+                                    icon: icon-exclamation-sign
+                                    inverse: per_page==all
+                                    popover:
+                                        title: Cuidado!
+                                        text: ¡Esto puede ser demasiado lento si hay demasiados datos que mostrar!
+                        -
+                            id: search
+                            type: search
+                            method: get
+                -
+                    id: list
+                    type: table
+                    automatic: model
+                    bordered: true
+                    striped: true
+                    read-only: False
+                    actions:
+                        - show
+                        - edit
+                        - delete

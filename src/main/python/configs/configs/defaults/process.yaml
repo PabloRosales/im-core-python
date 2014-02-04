@@ -1,0 +1,217 @@
+process:
+    mysql-3306:
+        name: MySQL 3306
+        process: '--socket=/var/lib/mysql/mysql.sock --port=3306'
+    mysql-3307:
+        name: Mysql 3307
+        process: '--socket=/var/lib/mysql/mysql.sock.interreps --port=3307'
+    mysql-3308:
+        name: Mysql 3308
+        process: '--socket=/var/lib/mysql/mysql.sock.dxc --port=3308'
+    mongod:
+        name: Mongo
+        process: '/usr/bin/mongod -f /etc/mongod.conf'
+    activemq-im:
+        name: ActiveMQ IM
+        process: '/activemq-im/bin/run.jar start'
+    activemq-dxc:
+        name: ActiveMQ DxC
+        process: '/activemq-dxc/bin/run.jar start'
+    esme-einteractua1:
+        name: ESME einteractua1
+        process: 'im-module-esme.jar -instance=ESME_EINTERACTUA1'
+    esme-einteractua2:
+        name: ESME einteractua2
+        process: 'im-module-esme.jar -instance=ESME_EINTERACTUA2'
+    esme-einteractua3:
+        name: ESME einteractua1
+        process: 'im-module-esme.jar -instance=ESME_EINTERACTUA3'
+    esme-grupito:
+        name: ESME grupito
+        process: 'im-module-esme.jar -instance=ESME_GRUPITO'
+    esme-interven:
+        name: ESME interven
+        process: 'im-module-esme.jar -instance=ESME_INTERVEN'
+    esme-intermov:
+        name: ESME intermov
+        process: 'im-module-esme.jar -instance=ESME_INTERMOV'
+    esme-interven60:
+        name: ESME interven60
+        process: 'im-module-esme.jar -instance=ESME_INTERVEN60'
+    esme-dxc:
+        name: ESME dxc
+        process: 'im-module-esme.jar -instance=ESME_INTERDXC'
+    esme-dxc-sal:
+        name: ESME dxc sv
+        process: 'im-module-esme.jar -instance=ESME_DXCSAL'
+    dlq-einteractua2:
+        name: DLQ einteractua2
+        process: 'im-dlqqueue.jar -instance=ESME_EINTERACTUA2'
+    dlq-einteractua3:
+        name: DLQ einteractua3
+        process: 'im-dlqqueue.jar -instance=ESME_EINTERACTUA3'
+    dlq-grupito:
+        name: DLQ Grupito
+        process: 'im-dlqqueue.jar -instance=ESME_GRUPITO'
+    dlq-interven:
+        name: DLQ interven
+        process: 'im-dlqqueue.jar -instance=ESME_INTERVEN'
+    dlq-interven60:
+        name: DLQ interven60
+        process: 'im-dlqqueue.jar -instance=ESME_INTERVEN60'
+    dlq-intermov:
+        name: DLQ intermov
+        process: 'im-dlqqueue.jar -instance=ESME_INTERMOV'
+    dlq-interdxc:
+        name: DLQ interdxc
+        process: 'im-dlqqueue.jar -instance=ESME_INTERDXC'
+    dlq-dxc:
+        name: DLQ dxc
+        process: 'im-dlqqueue.jar -instance=ESME_DXC_SV'
+    dlq-dxc-sv:
+        name: DLQ dxc sv
+        process: 'im-dlqqueue.jar -instance=ESME_DXC_SV'
+    dlq-activemq-im:
+        name: DLQ ActiveMQ IM
+        process: 'im-dlqqueue.jar -instance=BROKER_IM'
+    dlq-activemq-dxc:
+        name: DLQ ActiveMQ DxC
+        process: 'im-dlqqueue.jar -instance=BROKER_DXC'
+    billing-recurrent-prod1:
+        name: Billing Prod1 Recurrent
+        process: 'im-module-billing.jar --name=recurrentChargeScheduler -Dinstancia=prod1'
+    billing-recurrent-prod2:
+        process: 'im-module-billing.jar --name=recurrentChargeScheduler -Dinstancia=prod2'
+    billing-recurrent-prod3:
+        process: 'im-module-billing.jar --name=recurrentChargeScheduler -Dinstancia=prod3'
+    billing-recurrent-prod4:
+        process: 'im-module-billing.jar --name=recurrentChargeScheduler -Dinstancia=prod4'
+    billing-service-prod1:
+        process: 'im-module-billing.jar --name=billingService -Dinstancia=prod1'
+    billing-service-prod2:
+        process: 'im-module-billing.jar --name=billingService -Dinstancia=prod2'
+    billing-service-prod3:
+        process: 'im-module-billing.jar --name=billingService -Dinstancia=prod3'
+    billing-service-prod4:
+        process: 'im-module-billing.jar --name=billingService -Dinstancia=prod4'
+    monitoring-grupito:
+        process: 'im-monitoring.jar -instance=broker_grupito'
+    monitoring-dxc:
+        process: 'im-monitoring.jar -instance=broker_dxc'
+    #'multialertas-receiver-sv_tigo: 'im-multialertas.jar --name=receiver --instance=sv_tigo'
+    multialertas-receiver-gt_tigo:
+        process: 'im-multialertas.jar --name=receiver --instance=gt_tigo'
+    multialertas-receiver-gt_claro:
+        process: 'im-multialertas.jar --name=receiver --instance=gt_claro'
+    multialertas-receiver-ni_claro:
+        process: 'im-multialertas.jar --name=receiver --instance=ni_claro'
+    multialertas-receiver-hn_tigo:
+        process: 'im-multialertas.jar --name=receiver --instance=hn_tigo'
+    multialertas-twitter:
+        process: 'im-multialertas.jar --name=twitter'
+    multialertas-outboxSender:
+        process: 'im-multialertas.jar --name=outboxSender'
+    multialertas-bulkSender:
+        process: 'im-multialertas.jar --name=bulkSender'
+    multialertas-bulk-gt_tigo:
+        process: 'im-module-bulksender.jar --name=bulkSender -Dinstancia=multialertas-gt_tigo'
+    multialertas-bulk-gt_claro:
+        process: 'im-module-bulksender.jar --name=bulkSender -Dinstancia=multialertas-gt_claro'
+    multialertas-bulk-ni_claro:
+        process: 'im-module-bulksender.jar --name=bulkSender -Dinstancia=multialertas-ni_claro'
+    multialertas-bulk-hn_tigo:
+        process: 'im-module-bulksender.jar --name=bulkSender -Dinstancia=multialertas-hn_tigo'
+    celim-claro-sv:
+        process: 'im-app-celim.jar -Dinstancia=claro-sv'
+    celim-digicel-sv:
+        process: 'im-app-celim.jar -Dinstancia=digicel-sv'
+    celim-tigo-sv:
+        process: 'im-app-celim.jar -Dinstancia=tigo-sv'
+    #'celim-claro-hn: 'im-app-celim.jar -Dinstancia=claro-hn'
+    celim-claro-ni:
+        process: 'im-app-celim.jar -Dinstancia=claro-ni'
+    celim-claro-gt:
+        process: 'im-app-celim.jar -Dinstancia=claro-gt'
+    contactosms-tigo-sender:
+        process: 'im-srsms.jar --name=sender --instance=prod-tigocorp'
+    contactosms-tigo-scheduler:
+        process: 'im-srsms.jar --name=scheduler --instance=prod-tigocorp'
+    contactosms-tigo-receiver:
+        process: 'im-srsms.jar --name=receiver --instance=prod-tigocorp'
+    #'contactosms-tigo-optins: 'im-srsms.jar --name=optins --instance=prod-tigocorp'
+    contactosms-movistar-sender:
+        process: 'im-srsms.jar --name=sender --instance=prod-movistar'
+    contactosms-movistar-scheduler:
+        process: 'im-srsms.jar --name=scheduler --instance=prod-movistar'
+    contactosms-movistar-receiver:
+        process: 'im-srsms.jar --name=receiver --instance=prod-movistar'
+    #'contactosms-movistar-optins: 'im-srsms.jar --name=optins --instance=prod-movistar'
+    contactosms-claro-sender:
+        process: 'im-srsms.jar --name=sender --instance=prod-claro'
+    contactosms-claro-scheduler:
+        process: 'im-srsms.jar --name=scheduler --instance=prod-claro'
+    contactosms-claro-receiver:
+        process: 'im-srsms.jar --name=receiver --instance=prod-claro'
+    #'contactosms-claro-optins: 'im-srsms.jar --name=optins --instance=prod-claro'
+    contactosms-tigo-callcenter-sender:
+        process: 'im-srsms.jar --name=sender --instance=prod-tigo-callcenter'
+    contactosms-tigo-callcenter-scheduler:
+        process: 'im-srsms.jar --name=scheduler --instance=prod-tigo-callcenter'
+    contactosms-tigo-callcenter-receiver:
+        process: 'im-srsms.jar --name=receiver --instance=prod-tigo-callcenter'
+    #'contactosms-tigo-callcenter-optins: 'im-srsms.jar --name=optins --instance=prod-tigo-callcenter'
+    weather-receiver-gt_tigo:
+        process: 'im-multialertas.jar --name=receiver --project=weather --instance=gt_tigo'
+    #'weather-receiver-hn_tigo: 'im-multialertas.jar --name=receiver --project=weather --instance=hn_tigo'
+    #'weather-receiver-sv_tigo: 'im-multialertas.jar --name=receiver --project=weather --instance=sv_tigo'
+    #'ofertero-receiver: 'im-ofertero.jar --name=receiver'
+    tutwit-monitor-rdo:
+        process: 'im-tutwit.jar --nombre=monitor --instancia=prod-rdo --con-paises=9'
+    tutwit-monitor-ven:
+        process: 'im-tutwit.jar --nombre=monitor --instancia=prod-ven --con-paises=22'
+    tutwit-monitor-all:
+        process: 'im-tutwit.jar --nombre=monitor --instancia=prod-all --sin-paises=9'
+    tutwit-receptor:
+        process: 'im-tutwit.jar --nombre=receptor --instancia=prod'
+    #'gallup-receiver-peru: 'im-poll.jar --name=receiver -project=gallup -Dlog4j.configuration=./app.log4j.receiver.pe.properties --instance=pe'
+    #'gallup-receiver-hn_tigo: 'im-poll.jar --name=receiver -project=gallup -Dlog4j.configuration=./app.log4j.receiver.hn_tigo.properties --instance=hn_tigo'
+    #'gallup-receiver-hn-claro: 'im-poll.jar --name=receiver -project=gallup -Dlog4j.configuration=./app.log4j.receiver.hn_claro.properties --instance=hn_claro'
+    #'gallup-bulk-pe_movistar: 'im-app-clientes.jar -Dinstancia=poll-gallup-pe_movistar'
+    #'gallup-bulk-pe_claro: 'im-app-clientes.jar -Dinstancia=poll-gallup-pe_claro'
+    #'poll-multichatmovil-claro-ca: 'im-poll.jar --name=receiver -instance=multichatmovil_claro_ca'
+    #'poll-multichatmovil-tigocorp: 'im-poll.jar --name=receiver -instance=tigocorp'
+    dxc-co:
+        process: 'im-app-bulksender.jar -Dinstancia=dxc-co'
+    dxc-sv-tigo:
+        process: 'im-app-bulksender.jar -Dinstancia=dxc-sv_tigo'
+    dxc-gt-claro:
+        process: 'im-app-bulksender.jar -Dinstancia=dxc-gt_claro'
+    dxc-hn-claro:
+        process: 'im-app-bulksender.jar -Dinstancia=dxc-hn_claro'
+    dxc-tigo:
+        process: 'im-app-bulksender.jar -Dinstancia=dxc-gt_tigo'
+    grupito-monitor-gt:
+        process: 'daemon_grupito.php grupito monitor 2000'
+    grupito-receptor-gt:
+        process: 'daemon_grupito.php grupito receptor 2000'
+    grupito-monitor-gt-claro:
+        process: 'daemon_grupito_claro.php grupito monitor 2000'
+    grupito-receptor-gt-claro:
+        process: 'daemon_grupito_claro.php grupito receptor 2000'
+    multialertas_cp-receiver-gt_tigo:
+        process: 'im-multialertas.jar --name=receiver --instance=gt_tigo --project=content_promotion'
+    multialertas_cp-receiver-gt_claro:
+        process: 'im-multialertas.jar --name=receiver --instance=gt_claro --project=content_promotion'
+    multialertas_cp-outboxSender:
+        process: 'im-multialertas.jar --name=outboxSender --project=content_promotion'
+    multialertas_cp-bulkSender:
+        process: 'im-multialertas.jar --name=bulkSender --project=content_promotion'
+    multialertas_cp-bulk-ni:
+        process: 'im-module-bulksender.jar --name=bulkSender -Dinstancia=content_promotion_gt'
+    multialertas_cp_bulk-ni:
+        process: 'im-module-bulksender.jar --name=bulkSender -Dinstancia=content_promotion_ni'
+    #'quiniela_gt_tigo-eurocopa: 'receiver.py --instance=quiniela_gt_tigo_eurocopa'
+    datamining:
+        process: 'im-module-datamining.jar --name=eventAgent -instance=default'
+    promo-notifier:
+        process: 'im-module-promos.jar --name=winnersNotifier'

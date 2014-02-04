@@ -1,0 +1,10 @@
+host: 192.168.100.5
+port: 3306
+default_username: pablo
+default_password: nuevoserver
+autocommit: True
+autoflush: True
+pool_size: 8
+pool_recycle: 300
+query_directories: [/usr/local/lib/python/queries]
+databases:

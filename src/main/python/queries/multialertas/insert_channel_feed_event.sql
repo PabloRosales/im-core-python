@@ -1,0 +1,2 @@
+INSERT INTO channel_feed_event (name, event_kind, event_kind_id, start_date, time_before_check, created_on, processed_on, is_active)
+    VALUES (:name, 'MULTIMEDIA', :event_kind_id, CURRENT_DATE(), 0, NOW(), NULL, 1);

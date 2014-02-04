@@ -1,0 +1,36 @@
+default_level: info
+console_level: info
+file_path: /var/log/apps/im.log
+file_level: info
+# rotate logs every 1 day
+rotation_when: D
+rotation_interval: 1
+# keep 7 log files (one week)
+rotation_keep: 7
+loggers:
+    # third party
+    sqlalchemy.engine:
+        level: warning
+    sqlalchemy.pool:
+        level: warning
+    sqlalchemy.dialects:
+        level: warning
+    sqlalchemy.orm:
+        level: warning
+    werkzeug:
+        level: info
+    stomp.py:
+        level: debug
+    # core
+    im.core:
+        level: info
+    im.core.web.werkzeug:
+        level: info
+    im.core.database.mongo:
+        level: info
+    im.core.database.mysql:
+        level: info
+    im.core.templates.mako:
+        level: info
+    im.core.config:
+        level: info

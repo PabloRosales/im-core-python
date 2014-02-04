@@ -1,0 +1,20 @@
+multialertas_bulk_gt_tigo:
+    name: TigoAlerts
+    database: multialertas_bulk_gt_tigo
+    type: new
+multialertas_gt_tigomedia_bulk:
+    name: TigoMedia GT
+    database: multialertas_gt_tigomedia_bulk
+    type: new
+multialertas_sv_tigomedia_bulk:
+    name: TigoMedia SV
+    database: multialertas_sv_tigomedia_bulk
+    type: new
+dxc_gt_tigo_bulk:
+    name: DXC GT
+    database: dxc_gt_tigo_bulk
+    type: old
+broadcaster:
+    name: IM Broadcaster
+    database: broadcaster
+    type: old

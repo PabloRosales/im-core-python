@@ -1,0 +1,16 @@
+date: '%y-%m-%d %H:%M:%S'
+
+email:
+    to: ['sergeiw@interactuamovil.com', 'josue.ortega@interactuamovil.com', 'dennis.aldana@interactuamovil.com']
+    from: clientes@interactuamovil.com
+    host: 'smtp.gmail.com'
+    port: '587'
+    user: 'clientes@interactuamovil.com'
+    pass: 'imclientes!'
+sms:
+    to: ['40577893']
+    short_code: 7878
+    app_id: 0
+    telco_code: '056'
+    esme: einteractua3
+

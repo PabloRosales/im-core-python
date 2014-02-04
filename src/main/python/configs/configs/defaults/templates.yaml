@@ -1,0 +1,5 @@
+debug: False
+directories: [/Users/dennis/Dev/platform/python/templates]
+input_encoding: utf-8
+default_filters:
+    - decode.utf8

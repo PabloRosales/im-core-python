@@ -1,0 +1,2 @@
+INSERT INTO multimedia_content (channel_feed_multimedia_id, filename, display_filename, mimetype, title, description, alternate_text, created_on)
+    VALUES (:channel_feed_multimedia_id, :filename, :filename, :mimetype, :title, :description, NULL, NOW());
