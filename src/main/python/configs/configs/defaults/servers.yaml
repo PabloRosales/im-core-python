@@ -1,0 +1,26 @@
+apps1:
+    addr: apps1.im
+    role: appserver
+    os: linux
+    distro: redhat
+apps2:
+    addr: apps2.im
+    role: appserver
+    os: linux
+    distro: debian
+db1:
+    addr: db1.im
+    role: dbserver
+    os: linux
+    distro: redhat
+repo1:
+    addr: repo1.im
+    role: reposerver
+    os: linux
+    distro: debian
+web1:
+    addr: web1.im
+    role: webserver
+    os: linux
+    distro: redhat
+        
